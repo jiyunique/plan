@@ -1,0 +1,126 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: #333333;
+}
+*::selection {
+    background-color: #e66505;
+    color: #fcf9f3;
+}
+a {
+    color: inherit; text-decoration: none;
+}
+@font-face {
+  font-family: 'jejudoldam';
+  src: url('../fonts/jejudoldam.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/Pretendard-SemiBold.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+html, body {
+    width: 100%; height: 100%;
+    background-color: #e9e0d3;
+    cursor: url('../images/커서.png')10 10, auto;
+}
+
+/* 전체 */
+#trip {
+    width: 100%; height: 100%;
+}
+
+/* 로고 이미지 */
+#logo {
+    width: 100%;
+}
+#logo > img {
+    width: 80%; display: block;
+    margin: 15px auto 30px;
+}
+
+/* 마퀴 효과 1, 2, 3 */
+.marquee-wrapper {
+      width: 100%;
+      height: 8vw;
+      display: flex; overflow: hidden;
+      background-color: #154503;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      font-family: 'jejudoldam', sans-serif;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 10vw;
+      white-space: nowrap;
+      will-change: transform;
+      animation: scroll 400s linear infinite;
+    }
+
+    .marquee-track span {
+      color: #e66505;
+      font-size: 5vw;
+      font-weight: bold;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+/* 계획표 */
+.plan {
+    width: 90%;
+    background-color: #fcf9f3;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Pretendard', sans-serif;
+
+} 
+.block {
+    width: 90%; height: 14%;
+    background-color: #fcf9f3;
+    margin: 0 auto;
+
+}
+h3 {
+    color: #e66505;
+}
+a {
+    color: #f09a58;
+}
+.day {
+    width: 90%; 
+    margin: 20px auto;
+    border: 5px solid #154503;
+    border-radius: 20px;
+    font-size: 3.4vw;
+}
+.day > ul {
+    padding: 15px;
+}
+.day > ul > h3 {
+    margin-bottom: 5px;
+}
+.day > ul > li {
+    padding: 5px;
+}
+
+/* 푸터 이미지 */
+#footer {
+    width: 100%;
+}
+#footer > img {
+    width: 100%; display: block;
+    margin: -100px auto 0;
+}
